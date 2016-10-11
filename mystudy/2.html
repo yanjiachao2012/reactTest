@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <script src="../build/react.js"></script>
+    <script src="../build/react-dom.js"></script>
+    <script src="../build/browser.min.js"></script>
+    <title>jsx语法第二课</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+
+        }
+        div{
+            font-size:2rem;
+            color:#f60;
+        }
+    </style>
+</head>
+<body>
+<div id="chao1">
+
+</div>
+<script type="text/babel">
+    var names=["chao1","chao2","chao3"];
+    ReactDOM.render(
+            <div>
+            {
+            names.map(function(name){
+               return <h2>hello,{name}!</h2>
+            })
+            }
+            </div>,
+            document.getElementById("chao1")
+    );
+</script>
+</body>
+</html>

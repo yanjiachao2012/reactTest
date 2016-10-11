@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>react第七课--虚拟DOM</title>
+	<script src="../build/react.js"></script>
+	<script src="../build/react-dom.js"></script>
+	<script src="../build/browser.min.js"></script>
+</head>
+<body>
+	<div id="chao7"></div>
+	<script type="text/babel">
+		var MyDom=React.createClass({
+            handleClick:function(){
+            	this.refs.myTextInput.focus();
+         
+            },
+            render:function(){
+            	return (
+            		<div>
+
+                        <input type="text" ref="myTextInput"/>
+                        <input type="button" value="点击我" onClick={this.handleClick} />
+            		</div>
+            		);
+            }
+		});
+		ReactDOM.render(
+             <MyDom />,
+             document.getElementById("chao7")
+			);
+
+	</script>
+</body>
+</html>

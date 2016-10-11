@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<title>学习react第四课</title>
+	<script src="../build/react.js"></script>
+	<script src="../build/react-dom.js"></script>
+	<script src="../build/browser.min.js"></script>
+</head>
+<body>
+	<div id="chao1"></div>
+	<script type="text/babel">
+		var HelloMessage=React.createClass({
+		        render:function(){
+		            return <div>
+		            <h1>hello {this.props.name}</h1>some text<p>24324</p></div>;
+		   }
+		});
+		ReactDOM.render(
+           <HelloMessage name="yanzai"/>,
+           document.getElementById("chao1")
+		)
+
+	</script>
+</body>
+</html>

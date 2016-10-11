@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <script src="../build/react.js"></script>
+<!--     <script src="../build/JSXTransformer.js"></script> -->
+    <script src="../build/react-dom.js"></script>
+    <script src="../build/browser.min.js"></script>
+    <title>学习react第一课</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }
+        html{
+            font-size:16px;
+        }
+        .chao1 {
+            color: #f60;
+            font-size: 3rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div id="chao1"></div>
+<script type="text/babel">
+   ReactDOM.render(
+   <h1 className="chao1">hello,world!</h1>,
+   document.getElementById("chao1")
+   );
+
+</script>
+</body>
+</html>

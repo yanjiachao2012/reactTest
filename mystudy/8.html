@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>react第八课--this.state</title>
+	<script src="../build/react.js"></script>
+	<script src="../build/react-dom.js"></script>
+	<script src="../build/browser.min.js"></script>
+	<style rel="stylesheet">
+		p{
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<div id="chao8"></div>
+	<script type="text/babel">
+		var LinkButton=React.createClass({
+		     getInitialState:function(){
+		        return {
+                    liked:false
+		        };
+		     },
+		     handleClick:function(event){
+		        this.setState({
+		            liked:!this.state.liked
+		        });
+		     },
+		     render:function(){
+		         var text=this.state.liked ?'like':'notLiked';
+		         return (
+		         <p onClick={this.handleClick}>
+		         	you {text} this.click to toggle.
+		         </p>
+		         );
+		     }
+		});
+		ReactDOM.render(
+            <LinkButton />,
+            document.getElementById("chao8")
+		);
+	</script>
+</body>
+</html>

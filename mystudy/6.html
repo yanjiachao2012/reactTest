@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>react第六课--proptypes</title>
+	<script src="../build/react.js"></script>
+	<script src="../build/react-dom.js"></script>
+	<script src="../build/browser.min.js"></script>
+</head>
+<body>
+	<div id="chao6"></div>
+	<script type="text/babel">
+		var MyTitle=React.createClass({
+		    getDefaultProps:function(){
+		        return {
+		            title:'hello yanzai'
+		        }
+		    },
+
+			render:function() {
+				return <h1> {this.props.title} </h1>;
+			}
+		});
+
+		var data='0';
+		ReactDOM.render(
+            <MyTitle title={"jiachao"}/>,
+            document.getElementById("chao6")
+		);
+	</script>
+</body>
+</html>

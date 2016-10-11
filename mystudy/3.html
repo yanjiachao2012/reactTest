@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <script src="../build/react.js"></script>
+    <script src="../build/react-dom.js"></script>
+    <script src="../build/browser.min.js"></script>
+    <title>jsx数组</title>
+</head>
+<body>
+<div id="chao1"></div>
+<script type="text/babel">
+    var arr=[
+      <h1>hello,yanjiachao</h1>,
+      <h2>you will success</h2>,
+    ];
+    ReactDOM.render(
+       <div key={0}>{arr}</div>,
+       document.getElementById("chao1")
+    );
+</script>
+</body>
+</html>
