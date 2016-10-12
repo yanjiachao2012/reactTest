@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>单个组件</title>
+	<script src="../build/react.js"></script>
+	<script src="../build/react-dom.js"></script>
+	<script src="../build/browser.min.js"></script>
+</head>
+<body>
+	<div id="commentBox"></div>
+	<script type="text/babel">
+		var CommentBox = React.createClass({
+		    render:function(){
+		       return (
+		       <div className="commentbox">
+		       	   hi,这是单个组件
+		       </div>
+		       )
+		    }
+		});
+		ReactDOM.render(
+            <CommentBox />,
+            document.getElementById("commentBox")
+		)
+	</script>
+</body>
+</html>

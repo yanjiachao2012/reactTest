@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>多个组件嵌套--增加评论列表</title>
+	<script src="../build/react.js"></script>
+	<script src="../build/react-dom.js"></script>
+	<script src="../build/browser.min.js"></script>
+</head>
+<body>
+	<div id="commentBox"></div>
+	<script type="text/babel">
+		var CommentBox=React.createClass({
+		    render:function(){
+		      return (
+		      <div className="commentbox">
+			      <span>现在我是多个组件嵌套并且带有评论列表</span>
+	              <CommentList />
+			      <CommentForm />
+		      </div>
+		      )
+		    }
+		});
+		var CommentList=React.createClass({
+		   render:function(){
+		      return (
+		      <div className="commentList">
+		      	<Comment author="yanzai1">
+		      		我是第一条评论
+		      	</Comment>
+		      	<Comment author="yanzai2">
+		      		我是第二条评论
+		      	</Comment>
+		      </div>
+                 
+		      )
+		   }
+		});
+		var Comment=React.createClass({
+		    render:function(){
+		      return (
+		      <div className="comment">
+		      	<h2 className="commentAuthor">
+		      		{this.props.author}
+		      	</h2>
+		      	   <p>{this.props.children}</p>
+		      </div>
+		      )
+		    }
+		})
+		var CommentForm=React.createClass({
+		   render:function(){
+		      return (
+		      <div className="commentForm">
+		      	我是评论表单
+		      </div>
+		      )
+		   }
+		})
+		ReactDOM.render(
+           <CommentBox />,document.getElementById("commentBox")
+		)
+	</script>
+</body>
+</html>

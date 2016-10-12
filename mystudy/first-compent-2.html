@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>多个组件嵌套</title>
+	<script src="../build/react.js"></script>
+	<script src="../build/react-dom.js"></script>
+	<script src="../build/browser.min.js"></script>
+</head>
+<body>
+	<div id="commentBox"></div>
+	<script type="text/babel">
+		var CommentBox=React.createClass({
+		   render:function(){
+		      return (
+		      <div class="commentBox">
+		      	<span>我现在是多个组件嵌套，我有兄弟姐妹了</span>
+
+		      	<CommentList />
+		      	<CommentForm />
+		      </div>
+		      )
+		   }
+		});
+
+		var CommentList=React.createClass({
+		    render:function(){
+		       return (
+		       <div className="commentList">
+		       	   我是评论列表
+		       </div>
+		       )
+		    }
+		});
+		var CommentForm=React.createClass({
+		    render:function(){
+		        return (
+		        <div className="commentForm">
+		             我是评论表单
+		        </div>
+		         )
+		    }
+		})
+		ReactDOM.render(
+           <CommentBox />,
+           document.getElementById("commentBox")
+		)
+	</script>
+</body>
+</html>
