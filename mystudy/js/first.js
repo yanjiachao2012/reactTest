@@ -1,10 +1,3 @@
-var data1 = [{
-	author: "yanzai1",
-	text: "this is one comment1"
-}, {
-	author: "yanzai2",
-	text: "this is second comment2"
-}]
 var CommentBox = React.createClass({
 	getInitialState: function() {
 		return {
