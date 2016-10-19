@@ -8,6 +8,40 @@
 	<script src="../build/browser.min.js"></script>
 </head>
 <body>
-	<h2>晚安啦啦啦啦</h2>
+<div id="react5"></div>
+<script type="text/babel">
+	var CommentBox=React.createClass({
+	    render:function(){
+	        return (
+		        <div className="commentBox">
+		        	<h2>我现在是一个渲染数据的页面啦啦啦啦啦了</h2>
+		        	<CommentList />,
+		        	<CommentForm />
+		        </div>
+	        )
+	    }
+	});
+	var CommentList=React.createClass({
+	   render:function(){
+	      return (
+		      <div className="commentList">
+		         <h2>我是列表</h2>
+		      </div>
+	      )
+	   }
+	});
+	var CommentForm=React.createClass({
+	    render:function(){
+	       return (
+		       <div className="commentForm">
+		       	 我是评论表单
+		       </div>
+	       )
+	    }
+	});
+   ReactDOM.render(
+     <CommentBox />,document.getElementById("react5")
+   )
+</script>
 </body>
 </html>
